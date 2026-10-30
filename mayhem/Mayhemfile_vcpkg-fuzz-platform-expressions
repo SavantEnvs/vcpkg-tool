@@ -1,0 +1,9 @@
+project: savantenvs/vcpkg-tool
+target: vcpkg-fuzz-platform-expressions
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vcpkg-fuzz-platform-expressions/testsuite
+cmds:
+  - cmd: /mayhem/vcpkg-fuzz-platform-expressions
+    libfuzzer: true
+    timeout: 5
