@@ -1,0 +1,9 @@
+project: savantenvs/vcpkg-tool
+target: vcpkg-fuzz-utf8-decoder
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vcpkg-fuzz-utf8-decoder/testsuite
+cmds:
+  - cmd: /mayhem/vcpkg-fuzz-utf8-decoder
+    libfuzzer: true
+    timeout: 5

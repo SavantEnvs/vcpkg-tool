@@ -1,0 +1,9 @@
+project: savantenvs/vcpkg-tool
+target: vcpkg-fuzz-json
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/vcpkg-fuzz-json/testsuite
+cmds:
+  - cmd: /mayhem/vcpkg-fuzz-json
+    libfuzzer: true
+    timeout: 5
